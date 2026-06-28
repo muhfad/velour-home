@@ -165,10 +165,67 @@ function setupEventListeners() {
 
   mobileMenuClose.addEventListener("click", closeMobileMenu);
   
-  // Close mobile drawer on link click
+  // Desktop and Mobile Navigation Links active state toggle
+  const desktopNavLinks = document.querySelectorAll(".nav-link");
   const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+
+  function setNavActive(href) {
+    desktopNavLinks.forEach(link => {
+      if (link.getAttribute("href") === href) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+
+    mobileNavLinks.forEach(link => {
+      if (link.getAttribute("href") === href) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  }
+
+  desktopNavLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      const href = e.currentTarget.getAttribute("href");
+      setNavActive(href);
+    });
+  });
+
   mobileNavLinks.forEach(link => {
-    link.addEventListener("click", closeMobileMenu);
+    link.addEventListener("click", (e) => {
+      const href = e.currentTarget.getAttribute("href");
+      setNavActive(href);
+      closeMobileMenu();
+    });
+  });
+
+  // Scroll spy to highlight active section on scroll
+  const spySections = [
+    { id: "products-section", href: "#products-section" },
+    { id: "about-section", href: "#about-section" }
+  ];
+
+  window.addEventListener("scroll", () => {
+    let activeHref = "#"; // Default to Beranda
+
+    spySections.forEach(section => {
+      const el = document.getElementById(section.id);
+      if (el) {
+        const top = el.offsetTop - 150; // offset header height
+        const height = el.offsetHeight;
+        if (window.scrollY >= top && window.scrollY < top + height) {
+          activeHref = section.href;
+        }
+      }
+    });
+
+    const currentActiveLink = document.querySelector(".nav-link.active");
+    if (currentActiveLink && currentActiveLink.getAttribute("href") !== activeHref) {
+      setNavActive(activeHref);
+    }
   });
 
   // Product modal close
