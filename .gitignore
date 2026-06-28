@@ -1,0 +1,12 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+.agents/
+AGENTS.md
+task.md
+implementation_plan.md
+walkthrough.md

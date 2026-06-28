@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vélour Home | Premium Scandinavian Furniture</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Temukan koleksi furniture minimalis dan premium bergaya Nordik/Skandinavia untuk menyempurnakan keindahan rumah Anda di Vélour Home.">
+  <meta name="keywords" content="furniture premium, sofa minimalis, meja jati, kasur skandinavia, kursi makan mewah, velour home">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <p>Gratis Pengiriman Seluruh Indonesia untuk Pemesanan di atas Rp 5.000.000</p>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="main-header" id="main-header">
+    <div class="header-container">
+      <a href="#" class="brand-logo" id="brand-logo">Vélour.</a>
+      
+      <nav class="nav-links" id="nav-links">
+        <a href="#" class="nav-link active">Beranda</a>
+        <a href="#products-section" class="nav-link">Koleksi</a>
+        <a href="#about-section" class="nav-link">Tentang Kami</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Search bar input toggler (desktop always visible, mobile toggleable) -->
+        <div class="search-box">
+          <input type="text" id="search-input" placeholder="Cari furniture impian...">
+          <button id="search-btn" aria-label="Cari"><i data-lucide="search"></i></button>
+        </div>
+
+        <button id="theme-toggle" class="icon-btn" aria-label="Ganti Tema">
+          <i data-lucide="moon" class="theme-icon-dark"></i>
+          <i data-lucide="sun" class="theme-icon-light"></i>
+        </button>
+
+        <button id="cart-toggle-btn" class="icon-btn cart-btn" aria-label="Keranjang Belanja">
+          <i data-lucide="shopping-bag"></i>
+          <span class="cart-badge" id="cart-badge-count">0</span>
+        </button>
+
+        <button id="mobile-menu-btn" class="icon-btn mobile-only" aria-label="Menu Mobile">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <span class="brand-logo">Vélour.</span>
+      <button id="mobile-menu-close" class="icon-btn" aria-label="Tutup Menu"><i data-lucide="x"></i></button>
+    </div>
+    <div class="mobile-nav-body">
+      <a href="#" class="mobile-nav-link active">Beranda</a>
+      <a href="#products-section" class="mobile-nav-link">Koleksi</a>
+      <a href="#about-section" class="mobile-nav-link">Tentang Kami</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <span class="hero-subtitle">Koleksi Skandinavia Baru 2026</span>
+        <h1 class="hero-title">Keindahan dalam Kesederhanaan.</h1>
+        <p class="hero-description">Hadirkan kenyamanan sejati dan kehangatan estetika Nordik ke setiap sudut ruangan Anda dengan furniture berkualitas tinggi buatan pengrajin pilihan.</p>
+        <a href="#products-section" class="btn btn-primary btn-lg">Jelajahi Koleksi</a>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section container">
+      <div class="feature-item">
+        <div class="feature-icon"><i data-lucide="package"></i></div>
+        <div class="feature-info">
+          <h3>Bahan Premium</h3>
+          <p>Kayu Jati & Oak pilihan bersertifikasi ramah lingkungan.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i data-lucide="truck"></i></div>
+        <div class="feature-info">
+          <h3>Pengiriman Aman</h3>
+          <p>Garansi pengiriman kayu utuh dengan proteksi ekstra.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i data-lucide="shield-check"></i></div>
+        <div class="feature-info">
+          <h3>Garansi 2 Tahun</h3>
+          <p>Jaminan kualitas struktur dan sambungan kayu furniture kami.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Products Section -->
+    <section id="products-section" class="products-section container">
+      <div class="section-header">
+        <span class="section-tag">Kurasi Terbaik</span>
+        <h2 class="section-title">Pilih Berdasarkan Ruangan</h2>
+      </div>
+
+      <!-- Categories Navigation -->
+      <div class="categories-filter" id="categories-filter">
+        <button class="category-btn active" data-category="all">Semua Produk</button>
+        <button class="category-btn" data-category="living-room">Ruang Tamu</button>
+        <button class="category-btn" data-category="bedroom">Kamar Tidur</button>
+        <button class="category-btn" data-category="dining-room">Ruang Makan</button>
+        <button class="category-btn" data-category="workspace">Ruang Kerja</button>
+      </div>
+
+      <!-- Controls (Results Count & Sorting) -->
+      <div class="products-controls">
+        <div class="results-count" id="results-count">
+          Menampilkan 9 produk
+        </div>
+        <div class="sort-box">
+          <label for="sort-select">Urutkan:</label>
+          <select id="sort-select" class="sort-select">
+            <option value="default">Rekomendasi</option>
+            <option value="price-low">Harga: Rendah ke Tinggi</option>
+            <option value="price-high">Harga: Tinggi ke Rendah</option>
+            <option value="rating">Rating Tertinggi</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Product Cards Grid -->
+      <div class="products-grid" id="products-grid">
+        <!-- Dynamic content via JS -->
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-section" class="about-section">
+      <div class="about-container container">
+        <div class="about-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=800&q=80" alt="Tentang Kami Vélour Home" class="about-image">
+        </div>
+        <div class="about-content">
+          <span class="section-tag">Nilai Kami</span>
+          <h2>Kualitas Yang Berkelanjutan</h2>
+          <p>Di Vélour Home, kami percaya bahwa setiap furniture menceritakan sebuah kisah. Kami berkolaborasi dengan pengrajin lokal berbakat untuk memproduksi furniture berskala internasional dengan tetap melestarikan lingkungan.</p>
+          <p>Setiap produk kami dipahat menggunakan kayu legal pilihan dengan teknik konstruksi tradisional yang menjamin ketahanan produk selama beberapa generasi ke depan.</p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-num">10k+</span>
+              <span class="stat-lbl">Rumah Terdekorasi</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">100%</span>
+              <span class="stat-lbl">Bahan Berkelanjutan</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">4.9</span>
+              <span class="stat-lbl">Rating Kepuasan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sliding Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h2>Keranjang Belanja</h2>
+      <button id="cart-close-btn" class="icon-btn" aria-label="Tutup Keranjang"><i data-lucide="x"></i></button>
+    </div>
+    
+    <div class="cart-body" id="cart-items-container">
+      <!-- Dynamic cart items will go here -->
+      <div class="empty-cart-message">
+        <i data-lucide="shopping-bag" class="empty-cart-icon"></i>
+        <p>Keranjang belanja Anda masih kosong</p>
+        <button class="btn btn-primary" id="cart-continue-shopping">Mulai Belanja</button>
+      </div>
+    </div>
+
+    <div class="cart-footer" id="cart-drawer-footer">
+      <div class="price-summary">
+        <div class="price-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">Rp 0</span>
+        </div>
+        <div class="price-row">
+          <span>Pengiriman</span>
+          <span id="cart-shipping">Gratis</span>
+        </div>
+        <div class="price-row tax-row">
+          <span>Pajak (PPN 11%)</span>
+          <span id="cart-tax">Rp 0</span>
+        </div>
+        <div class="price-row total-row">
+          <span>Total Akhir</span>
+          <span id="cart-total">Rp 0</span>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-block" id="checkout-btn-trigger">Checkout Sekarang</button>
+    </div>
+  </aside>
+
+  <!-- Product Details Lightbox Modal -->
+  <div class="modal-overlay" id="product-modal">
+    <div class="modal-container product-modal-container">
+      <button class="modal-close" id="product-modal-close" aria-label="Tutup Detail"><i data-lucide="x"></i></button>
+      <div class="product-modal-content" id="product-modal-content">
+        <!-- Dynamic detail content via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Simulated Checkout Modal -->
+  <div class="modal-overlay" id="checkout-modal">
+    <div class="modal-container checkout-modal-container">
+      <button class="modal-close" id="checkout-modal-close" aria-label="Tutup Checkout"><i data-lucide="x"></i></button>
+      
+      <!-- Checkout Form State -->
+      <div class="checkout-form-state" id="checkout-form-state">
+        <h2 class="modal-title">Simulasi Pembayaran</h2>
+        
+        <div class="checkout-layout">
+          <!-- Shipping Form -->
+          <form id="checkout-shipping-form" class="checkout-form">
+            <h3>Detail Pengiriman</h3>
+            <div class="form-group">
+              <label for="checkout-name">Nama Lengkap</label>
+              <input type="text" id="checkout-name" required placeholder="Masukkan nama penerima">
+            </div>
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="checkout-phone">Nomor Telepon</label>
+                <input type="tel" id="checkout-phone" required placeholder="Contoh: 08123456789">
+              </div>
+              <div class="form-group">
+                <label for="checkout-email">Email</label>
+                <input type="email" id="checkout-email" required placeholder="alamat@email.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="checkout-address">Alamat Lengkap</label>
+              <textarea id="checkout-address" required placeholder="Nama jalan, nomor rumah, RT/RW, kelurahan, kecamatan"></textarea>
+            </div>
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="checkout-city">Kota / Kabupaten</label>
+                <input type="text" id="checkout-city" required placeholder="Contoh: Jakarta Selatan">
+              </div>
+              <div class="form-group">
+                <label for="checkout-zip">Kode Pos</label>
+                <input type="text" id="checkout-zip" required placeholder="Contoh: 12345">
+              </div>
+            </div>
+
+            <h3>Metode Pembayaran</h3>
+            <div class="payment-options">
+              <label class="payment-option">
+                <input type="radio" name="payment-method" value="bank" checked>
+                <div class="payment-option-card">
+                  <i data-lucide="credit-card"></i>
+                  <span>Transfer Bank</span>
+                </div>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment-method" value="ewallet">
+                <div class="payment-option-card">
+                  <i data-lucide="wallet"></i>
+                  <span>E-Wallet (GoPay/OVO)</span>
+                </div>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment-method" value="cc">
+                <div class="payment-option-card">
+                  <i data-lucide="credit-card"></i>
+                  <span>Kartu Kredit</span>
+                </div>
+              </label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 1.5rem;">Proses Pembayaran</button>
+          </form>
+
+          <!-- Order Summary side -->
+          <div class="order-summary-sidebar">
+            <h3>Pesanan Anda</h3>
+            <div class="summary-items-list" id="checkout-items-list">
+              <!-- Dynamic items via JS -->
+            </div>
+            <div class="summary-totals">
+              <div class="price-row">
+                <span>Subtotal</span>
+                <span id="checkout-subtotal">Rp 0</span>
+              </div>
+              <div class="price-row">
+                <span>Pengiriman</span>
+                <span id="checkout-shipping">Gratis</span>
+              </div>
+              <div class="price-row">
+                <span>Pajak (11%)</span>
+                <span id="checkout-tax">Rp 0</span>
+              </div>
+              <div class="price-row total-row" style="border-top: 1px dashed var(--border); padding-top: 1rem; margin-top: 0.5rem;">
+                <span>Total Bayar</span>
+                <span id="checkout-total" class="checkout-total-price">Rp 0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Checkout Success State (Hidden by default) -->
+      <div class="checkout-success-state" id="checkout-success-state" style="display: none;">
+        <div class="success-icon-wrapper">
+          <div class="success-ring animate-ring"></div>
+          <i data-lucide="check" class="success-checkmark"></i>
+        </div>
+        <h2>Pemesanan Berhasil!</h2>
+        <p class="success-order-num">Nomor Transaksi: <strong id="success-invoice-id">#VL-20260628001</strong></p>
+        <p class="success-message">Terima kasih atas pesanan Anda. Kami telah mengirimkan struk pembelian dan detail pelacakan ke email Anda. Tim kami akan segera memproses pengiriman furniture Anda.</p>
+        <button class="btn btn-primary" id="success-close-btn">Kembali Berbelanja</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div class="toast-notification" id="toast-notification">
+    <i data-lucide="check-circle" class="toast-icon"></i>
+    <span class="toast-message" id="toast-message-text">Produk ditambahkan ke keranjang!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-container container">
+      <div class="footer-col brand-col">
+        <span class="brand-logo">Vélour.</span>
+        <p>Menghadirkan harmoni, kenyamanan, dan kualitas furniture Nordik di rumah Anda sejak tahun 2018.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#" aria-label="Pinterest"><i data-lucide="pinterest"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Koleksi</h4>
+        <ul>
+          <li><a href="#products-section" class="footer-category-link" data-category="living-room">Ruang Tamu</a></li>
+          <li><a href="#products-section" class="footer-category-link" data-category="bedroom">Kamar Tidur</a></li>
+          <li><a href="#products-section" class="footer-category-link" data-category="dining-room">Ruang Makan</a></li>
+          <li><a href="#products-section" class="footer-category-link" data-category="workspace">Ruang Kerja</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Bantuan</h4>
+        <ul>
+          <li><a href="#">Cara Pemesanan</a></li>
+          <li><a href="#">Pengiriman & Pengembalian</a></li>
+          <li><a href="#">Garansi Produk</a></li>
+          <li><a href="#">Hubungi Kami</a></li>
+        </ul>
+      </div>
+      <div class="footer-col newsletter-col">
+        <h4>Dapatkan Penawaran Spesial</h4>
+        <p>Daftarkan email Anda untuk info diskon produk terbaru, tips interior, dan penawaran eksklusif.</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" placeholder="Alamat email Anda" required aria-label="Alamat email">
+          <button type="submit" aria-label="Daftar"><i data-lucide="arrow-right"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 Vélour Home. Hak Cipta Dilindungi Undang-Undang.</p>
+      <p>Made with &hearts; for Scandinavian Living.</p>
+    </div>
+  </footer>
+
+  <!-- Include App JS Database and Logic -->
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
